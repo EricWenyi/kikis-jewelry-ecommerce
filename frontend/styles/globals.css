@@ -1,0 +1,187 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, sans-serif;
+  font-weight: 300;
+  color: #2C2C2C;
+  background-color: #FAF8F5;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8E6E3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A962;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A88B4A;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-50;
+}
+
+/* Custom button styles */
+.btn {
+  @apply inline-block px-10 py-4 font-sans text-xs font-medium tracking-wider uppercase transition-all duration-300 focus-ring;
+}
+
+.btn-primary {
+  @apply bg-charcoal text-cream hover:bg-gold-dark;
+}
+
+.btn-secondary {
+  @apply bg-transparent text-charcoal border border-charcoal hover:bg-charcoal hover:text-cream;
+}
+
+/* Section labels */
+.section-label {
+  @apply inline-block text-xs font-medium tracking-wider uppercase text-gold mb-4;
+}
+
+/* Image placeholder animation */
+.image-placeholder {
+  @apply bg-gradient-to-br from-light-gray to-cream flex items-center justify-center text-6xl text-gold transition-all duration-300;
+}
+
+.image-placeholder:hover {
+  @apply scale-105;
+}
+
+/* Loading states */
+.loading-skeleton {
+  @apply animate-pulse bg-light-gray;
+}
+
+/* Cart badge */
+.cart-badge {
+  @apply absolute -top-2 -right-2 bg-gold text-charcoal text-xs font-medium rounded-full w-5 h-5 flex items-center justify-center;
+}
+
+/* Product grid */
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8;
+}
+
+/* Responsive text */
+.hero-title {
+  @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl lg:text-5xl;
+}
+
+/* Glass morphism */
+.glass {
+  @apply bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-5 py-4 text-sm border border-light-gray bg-warm-white transition-all duration-300 focus-ring focus:border-gold;
+}
+
+.form-textarea {
+  @apply form-input resize-vertical min-h-32;
+}
+
+/* Error states */
+.error-text {
+  @apply text-red-600 text-sm mt-2;
+}
+
+/* Success states */
+.success-text {
+  @apply text-green-600 text-sm mt-2;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  @apply fixed inset-0 z-50 bg-charcoal bg-opacity-95 backdrop-blur-sm;
+}
+
+/* Product image gallery */
+.product-image-gallery {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+}
+
+.product-thumbnails {
+  @apply flex lg:flex-col gap-4 order-2 lg:order-1;
+}
+
+.product-main-image {
+  @apply order-1 lg:order-2;
+}
+
+/* Quantity selector */
+.quantity-selector {
+  @apply flex items-center border border-light-gray;
+}
+
+.quantity-btn {
+  @apply w-10 h-10 flex items-center justify-center text-lg hover:bg-light-gray transition-colors;
+}
+
+/* Price display */
+.price {
+  @apply font-serif text-xl text-charcoal;
+}
+
+.price-compare {
+  @apply text-gray line-through text-base;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-2 py-1 text-xs font-medium rounded;
+}
+
+.badge-featured {
+  @apply bg-gold text-charcoal;
+}
+
+.badge-sale {
+  @apply bg-red-500 text-white;
+}
+
+/* Animation utilities */
+.animate-in {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
