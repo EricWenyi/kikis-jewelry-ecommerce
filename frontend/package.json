@@ -1,40 +1,13 @@
 {
   "name": "kikis-jewelry-frontend",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Kiki's Jewelry E-commerce Frontend",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve . -l $PORT"
   },
   "dependencies": {
-    "next": "14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "axios": "^1.6.2",
-    "react-query": "^3.39.3",
-    "next-auth": "^4.24.5",
-    "stripe": "^14.12.0",
-    "@stripe/stripe-js": "^2.4.0",
-    "@stripe/react-stripe-js": "^2.4.0",
-    "react-hook-form": "^7.48.2",
-    "react-hot-toast": "^2.4.1",
-    "framer-motion": "^10.16.16",
-    "js-cookie": "^3.0.5",
-    "lucide-react": "^0.298.0",
-    "clsx": "^2.0.0",
-    "tailwindcss": "^3.3.6",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32"
-  },
-  "devDependencies": {
-    "@types/node": "^20.10.4",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
-    "@types/js-cookie": "^3.0.6",
-    "eslint": "^8.55.0",
-    "eslint-config-next": "14.0.4",
-    "typescript": "^5.3.3"
+    "serve": "^14.2.0"
   }
 }

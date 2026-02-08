@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiki's Jewelry | Handcrafted in the Bay Area</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Kiki's</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn cart-btn" onclick="toggleCart()">
+                    🛒
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="icon-btn menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-tagline">Handcrafted in the Bay Area</span>
+            <h1>Kiki's Jewelry</h1>
+            <p>Small batch, artisan jewelry designed for the modern woman.<br>Each piece tells a story of elegance and simplicity.</p>
+            <a href="#collections" class="btn btn-primary">Explore Collections</a>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image">
+                    <div class="image-placeholder">
+                        <span>✨</span>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <span class="section-label">Our Story</span>
+                    <h2>Beauty in Simplicity</h2>
+                    <p>Born in San Francisco, Kiki's Jewelry celebrates the understated elegance of minimalist design. We believe that the most beautiful jewelry doesn't shout—it whispers.</p>
+                    <p>Each piece is handcrafted in our Bay Area studio using ethically sourced materials. From delicate gold chains to sculptural silver earrings, we create jewelry that becomes part of your everyday story.</p>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Handcrafted</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Local</span>
+                            <span class="stat-label">Bay Area Made</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Ethical</span>
+                            <span class="stat-label">Materials</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Collections</span>
+                <h2>Curated for You</h2>
+            </div>
+            <div class="collection-grid">
+                <div class="collection-card" data-product-id="1">
+                    <div class="card-image">
+                        <div class="image-placeholder gold">
+                            <span>○</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Golden Hour</h3>
+                        <p>Delicate gold pieces that catch the California sun</p>
+                        <span class="price">From $48</span>
+                        <button class="btn btn-secondary add-to-cart" onclick="addToCart(1)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="collection-card" data-product-id="2">
+                    <div class="card-image">
+                        <div class="image-placeholder silver">
+                            <span>◇</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pacific Silver</h3>
+                        <p>Sterling silver inspired by ocean waves</p>
+                        <span class="price">From $36</span>
+                        <button class="btn btn-secondary add-to-cart" onclick="addToCart(2)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="collection-card" data-product-id="3">
+                    <div class="card-image">
+                        <div class="image-placeholder rose">
+                            <span>❋</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Rose Bloom</h3>
+                        <p>Rose gold warmth for everyday elegance</p>
+                        <span class="price">From $52</span>
+                        <button class="btn btn-secondary add-to-cart" onclick="addToCart(3)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="collection-card" data-product-id="4">
+                    <div class="card-image">
+                        <div class="image-placeholder mixed">
+                            <span>✦</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mixed Metals</h3>
+                        <p>Bold combinations for the modern minimalist</p>
+                        <span class="price">From $58</span>
+                        <button class="btn btn-secondary add-to-cart" onclick="addToCart(4)">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <div class="featured-content">
+                <span class="section-label">Featured</span>
+                <h2>The Signature Piece</h2>
+                <p>Our bestselling Crescent Moon Necklace—a delicate 14k gold-filled pendant on a whisper-thin chain. The perfect everyday piece that transitions from coffee runs to cocktail hours.</p>
+                <div class="featured-price">
+                    <span class="price-tag">$68</span>
+                    <a href="#contact" class="btn btn-secondary">Inquire</a>
+                </div>
+            </div>
+            <div class="featured-image">
+                <div class="image-placeholder featured-placeholder">
+                    <span>☽</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"The most beautiful necklace I own. I never take it off."</p>
+                    <span class="author">— Sarah M., San Francisco</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Get in Touch</span>
+                    <h2>Let's Connect</h2>
+                    <p>Visit us at our studio in the Mission District, or reach out to schedule a private viewing of our collections.</p>
+                    <div class="contact-details">
+                        <div class="detail">
+                            <span class="detail-label">Studio</span>
+                            <span class="detail-value">Mission District, SF</span>
+                        </div>
+                        <div class="detail">
+                            <span class="detail-label">Email</span>
+                            <span class="detail-value">hello@kikisjewelry.com</span>
+                        </div>
+                        <div class="detail">
+                            <span class="detail-label">Instagram</span>
+                            <span class="detail-value">@kikisjewelry</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">×</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">$0</span>
+                </div>
+                <button class="btn btn-primary checkout-btn" onclick="checkout()">
+                    Checkout with Stripe
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">Kiki's</span>
+                    <p>Handcrafted jewelry for the modern minimalist.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#story">Story</a>
+                    <a href="#collections">Collections</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#">Instagram</a>
+                    <a href="#">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Kiki's Jewelry. Made with ♡ in San Francisco.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
